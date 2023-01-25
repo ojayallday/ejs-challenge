@@ -1,0 +1,18 @@
+<%-include("Partials/header"); -%>
+
+<h1>HOME</h1>
+<p><%= startingContent %> </p>
+
+
+<% latestPosts.forEach(function(post){ %>
+   <% console.log(post.title) %> 
+   <h2> <%= post.title %> </h2>
+   <p> 
+        <%= post.body.substring(0,100 ) + " ..." %> 
+        <a href="/posts/<%= post.title %> ">Read More</a> 
+    </p>
+<% }) %> 
+
+<% console.log(latestPosts) %> 
+
+<%- include("Partials/footer"); -%> 
